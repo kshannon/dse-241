@@ -10,8 +10,6 @@
     <!--
         Load the Olympic dataset as json file
     -->
-    
-   
 
     <script src='data/exercise2-olympics.json'></script>
     <script>
@@ -230,7 +228,7 @@
         // by enabling the tooltip.
         function mouseover(d) {
             tooltip.text(d.key + ": " +
-                d.value + " sighting" +
+                d.value + " medal" +
                 (d.value > 1 ? "s" : ""))
                 .transition()
                 .attr("fill-opacity", 1);
