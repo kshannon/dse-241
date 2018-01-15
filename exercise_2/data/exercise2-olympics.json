@@ -3531,7 +3531,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 59.9137,
     "Longitude": 10.7529
   },
@@ -3544,7 +3544,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 59.9137,
     "Longitude": 10.7529
   },
@@ -4779,7 +4779,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4792,7 +4792,7 @@ dataset = [
     "Event": "10000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4805,7 +4805,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4818,7 +4818,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4831,7 +4831,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4844,7 +4844,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4857,7 +4857,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4870,7 +4870,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4883,7 +4883,7 @@ dataset = [
     "Event": "slalom",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4896,7 +4896,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4909,7 +4909,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4922,7 +4922,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4935,7 +4935,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4948,7 +4948,7 @@ dataset = [
     "Event": "3x5km relay",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4961,7 +4961,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -4974,7 +4974,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 46.5443,
     "Longitude": 12.1332
   },
@@ -5728,7 +5728,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5741,7 +5741,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5754,7 +5754,7 @@ dataset = [
     "Event": "10000m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5767,7 +5767,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5780,7 +5780,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5793,7 +5793,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5806,7 +5806,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5819,7 +5819,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5832,7 +5832,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5845,7 +5845,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5858,7 +5858,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5871,7 +5871,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5884,7 +5884,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5897,7 +5897,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5910,7 +5910,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5923,7 +5923,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5936,7 +5936,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5949,7 +5949,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5962,7 +5962,7 @@ dataset = [
     "Event": "3x5km relay",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5975,7 +5975,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -5988,7 +5988,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 39.1954,
     "Longitude": -120.2355
   },
@@ -7067,7 +7067,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7080,7 +7080,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7093,7 +7093,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7106,7 +7106,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7119,7 +7119,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7132,7 +7132,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7145,7 +7145,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7158,7 +7158,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7171,7 +7171,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7184,7 +7184,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7197,7 +7197,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7210,7 +7210,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7223,7 +7223,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7236,7 +7236,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7249,7 +7249,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7262,7 +7262,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7275,7 +7275,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7288,7 +7288,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7301,7 +7301,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7314,7 +7314,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7327,7 +7327,7 @@ dataset = [
     "Event": "3x5km relay",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7340,7 +7340,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7353,7 +7353,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7366,7 +7366,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7379,7 +7379,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -7834,7 +7834,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7847,7 +7847,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7860,7 +7860,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7873,7 +7873,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7886,7 +7886,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7899,7 +7899,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7912,7 +7912,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7925,7 +7925,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7938,7 +7938,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7951,7 +7951,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7964,7 +7964,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -7977,7 +7977,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8588,7 +8588,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8601,7 +8601,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8614,7 +8614,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8627,7 +8627,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8640,7 +8640,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8653,7 +8653,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8666,7 +8666,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8679,7 +8679,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8692,7 +8692,7 @@ dataset = [
     "Event": "3x5km relay",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8705,7 +8705,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8718,7 +8718,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8731,7 +8731,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -8744,7 +8744,7 @@ dataset = [
     "Event": "K120 individual (90m)",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 45.1841,
     "Longitude": 5.7238
   },
@@ -9043,7 +9043,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9056,7 +9056,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9069,7 +9069,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9082,7 +9082,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9095,7 +9095,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9108,7 +9108,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9121,7 +9121,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9134,7 +9134,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9147,7 +9147,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9160,7 +9160,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9173,7 +9173,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9186,7 +9186,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9199,7 +9199,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9212,7 +9212,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9225,7 +9225,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9238,7 +9238,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9251,7 +9251,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9264,7 +9264,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9277,7 +9277,7 @@ dataset = [
     "Event": "K120 individual (90m)",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9901,7 +9901,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9914,7 +9914,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9927,7 +9927,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9940,7 +9940,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9953,7 +9953,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9966,7 +9966,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9979,7 +9979,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -9992,7 +9992,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10005,7 +10005,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10018,7 +10018,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10031,7 +10031,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10044,7 +10044,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10057,7 +10057,7 @@ dataset = [
     "Event": "3x5km relay",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10070,7 +10070,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10083,7 +10083,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10096,7 +10096,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.0234,
     "Longitude": 141.3345
   },
@@ -10434,7 +10434,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10447,7 +10447,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10460,7 +10460,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10473,7 +10473,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10486,7 +10486,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10499,7 +10499,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10512,7 +10512,7 @@ dataset = [
     "Event": "downhill",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10525,7 +10525,7 @@ dataset = [
     "Event": "giant slalom",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10538,7 +10538,7 @@ dataset = [
     "Event": "slalom",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10551,7 +10551,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10577,7 +10577,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10590,7 +10590,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10603,7 +10603,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10616,7 +10616,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10629,7 +10629,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10642,7 +10642,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10655,7 +10655,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10668,7 +10668,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10681,7 +10681,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10694,7 +10694,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10707,7 +10707,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10720,7 +10720,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10733,7 +10733,7 @@ dataset = [
     "Event": "4x5km relay",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10746,7 +10746,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10759,7 +10759,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10772,7 +10772,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10785,7 +10785,7 @@ dataset = [
     "Event": "K120 individual (90m)",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10798,7 +10798,7 @@ dataset = [
     "Event": "K90 individual (70m)",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -10811,7 +10811,7 @@ dataset = [
     "Event": "K90 individual (70m)",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11175,7 +11175,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11188,7 +11188,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11201,7 +11201,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11214,7 +11214,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11227,7 +11227,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11240,7 +11240,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11253,7 +11253,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11266,7 +11266,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11279,7 +11279,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11292,7 +11292,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11305,7 +11305,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11318,7 +11318,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11331,7 +11331,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11344,7 +11344,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11357,7 +11357,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11370,7 +11370,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11383,7 +11383,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11396,7 +11396,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11409,7 +11409,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11422,7 +11422,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11435,7 +11435,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11448,7 +11448,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11461,7 +11461,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11474,7 +11474,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11487,7 +11487,7 @@ dataset = [
     "Event": "4x5km relay",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11500,7 +11500,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11513,7 +11513,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 47.2711,
     "Longitude": 11.4038
   },
@@ -11916,7 +11916,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -11929,7 +11929,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -11942,7 +11942,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -11955,7 +11955,7 @@ dataset = [
     "Event": "giant slalom",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -11968,7 +11968,7 @@ dataset = [
     "Event": "slalom",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -11994,7 +11994,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12007,7 +12007,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12020,7 +12020,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12033,7 +12033,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12046,7 +12046,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12059,7 +12059,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12072,7 +12072,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12085,7 +12085,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12098,7 +12098,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12111,7 +12111,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12124,7 +12124,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12137,7 +12137,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12150,7 +12150,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12163,7 +12163,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12176,7 +12176,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12189,7 +12189,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12202,7 +12202,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12215,7 +12215,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12228,7 +12228,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12241,7 +12241,7 @@ dataset = [
     "Event": "4x5km relay",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12254,7 +12254,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12267,7 +12267,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12280,7 +12280,7 @@ dataset = [
     "Event": "K90 individual (70m)",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12709,7 +12709,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12722,7 +12722,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12735,7 +12735,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12748,7 +12748,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12761,7 +12761,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12774,7 +12774,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12787,7 +12787,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12800,7 +12800,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12813,7 +12813,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12826,7 +12826,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12839,7 +12839,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12852,7 +12852,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12865,7 +12865,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12878,7 +12878,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12891,7 +12891,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12904,7 +12904,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12917,7 +12917,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12930,7 +12930,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12943,7 +12943,7 @@ dataset = [
     "Event": "4x5km relay",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12956,7 +12956,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12969,7 +12969,7 @@ dataset = [
     "Event": "50km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -12982,7 +12982,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 44.2856,
     "Longitude": -73.9833
   },
@@ -13424,7 +13424,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13437,7 +13437,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13450,7 +13450,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13463,7 +13463,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13489,7 +13489,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13502,7 +13502,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13515,7 +13515,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13528,7 +13528,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13541,7 +13541,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13554,7 +13554,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13567,7 +13567,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13580,7 +13580,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13593,7 +13593,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13606,7 +13606,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13619,7 +13619,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13632,7 +13632,7 @@ dataset = [
     "Event": "10000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13645,7 +13645,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13658,7 +13658,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13671,7 +13671,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13684,7 +13684,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13697,7 +13697,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13710,7 +13710,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13723,7 +13723,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13736,7 +13736,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13749,7 +13749,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13762,7 +13762,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13775,7 +13775,7 @@ dataset = [
     "Event": "K120 individual (90m)",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -13788,7 +13788,7 @@ dataset = [
     "Event": "K90 individual (70m)",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14230,7 +14230,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14243,7 +14243,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14256,7 +14256,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14269,7 +14269,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14282,7 +14282,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14295,7 +14295,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14308,7 +14308,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14321,7 +14321,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14334,7 +14334,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14347,7 +14347,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14360,7 +14360,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14373,7 +14373,7 @@ dataset = [
     "Event": "10000m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14386,7 +14386,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14399,7 +14399,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14412,7 +14412,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14425,7 +14425,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14438,7 +14438,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14451,7 +14451,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14464,7 +14464,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14477,7 +14477,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14490,7 +14490,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14503,7 +14503,7 @@ dataset = [
     "Event": "20km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14516,7 +14516,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14529,7 +14529,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14542,7 +14542,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 43.8634,
     "Longitude": 18.4132
   },
@@ -14984,7 +14984,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -14997,7 +14997,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15010,7 +15010,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15023,7 +15023,7 @@ dataset = [
     "Event": "downhill",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15036,7 +15036,7 @@ dataset = [
     "Event": "giant slalom",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15049,7 +15049,7 @@ dataset = [
     "Event": "slalom",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15062,7 +15062,7 @@ dataset = [
     "Event": "slalom",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15075,7 +15075,7 @@ dataset = [
     "Event": "Team",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "West Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15088,7 +15088,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15101,7 +15101,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15114,7 +15114,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15127,7 +15127,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15140,7 +15140,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15153,7 +15153,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15166,7 +15166,7 @@ dataset = [
     "Event": "doubles",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15179,7 +15179,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15192,7 +15192,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15205,7 +15205,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15218,7 +15218,7 @@ dataset = [
     "Event": "singles",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15231,7 +15231,7 @@ dataset = [
     "Event": "individual",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15244,7 +15244,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15257,7 +15257,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15270,7 +15270,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15283,7 +15283,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15296,7 +15296,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15309,7 +15309,7 @@ dataset = [
     "Event": "1500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15322,7 +15322,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15335,7 +15335,7 @@ dataset = [
     "Event": "3000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15348,7 +15348,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15361,7 +15361,7 @@ dataset = [
     "Event": "5000m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15374,7 +15374,7 @@ dataset = [
     "Event": "500m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15387,7 +15387,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15400,7 +15400,7 @@ dataset = [
     "Event": "500m",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "East Germany",
+    "Country": "Germany",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15972,7 +15972,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15985,7 +15985,7 @@ dataset = [
     "Event": "10km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -15998,7 +15998,7 @@ dataset = [
     "Event": "20km",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16011,7 +16011,7 @@ dataset = [
     "Event": "4x7.5km relay",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16024,7 +16024,7 @@ dataset = [
     "Event": "four-man",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16037,7 +16037,7 @@ dataset = [
     "Event": "two-man",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16050,7 +16050,7 @@ dataset = [
     "Event": "ice hockey",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16063,7 +16063,7 @@ dataset = [
     "Event": "singles",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16076,7 +16076,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16089,7 +16089,7 @@ dataset = [
     "Event": "ice dancing",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16102,7 +16102,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16115,7 +16115,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16128,7 +16128,7 @@ dataset = [
     "Event": "pairs",
     "Gender": "X",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16141,7 +16141,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16154,7 +16154,7 @@ dataset = [
     "Event": "1000m",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16167,7 +16167,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16180,7 +16180,7 @@ dataset = [
     "Event": "10km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16193,7 +16193,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16206,7 +16206,7 @@ dataset = [
     "Event": "15km",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16219,7 +16219,7 @@ dataset = [
     "Event": "20km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16232,7 +16232,7 @@ dataset = [
     "Event": "20km",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16245,7 +16245,7 @@ dataset = [
     "Event": "20km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16258,7 +16258,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16271,7 +16271,7 @@ dataset = [
     "Event": "30km mass start",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16284,7 +16284,7 @@ dataset = [
     "Event": "4x10km relay",
     "Gender": "M",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16297,7 +16297,7 @@ dataset = [
     "Event": "4x5km relay",
     "Gender": "W",
     "Medal": "Gold",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16310,7 +16310,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16323,7 +16323,7 @@ dataset = [
     "Event": "5km",
     "Gender": "W",
     "Medal": "Silver",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
@@ -16336,7 +16336,7 @@ dataset = [
     "Event": "individual",
     "Gender": "M",
     "Medal": "Bronze",
-    "Country": "Soviet Union",
+    "Country": "Russia",
     "Latitude": 51.0318,
     "Longitude": -114.0824
   },
