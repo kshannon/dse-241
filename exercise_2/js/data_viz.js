@@ -1,386 +1,252 @@
-// Dimensions of sunburst.
-var width = 750;
-var height = 600;
-var radius = Math.min(width, height) / 2;
+d3.json("data/exercise2-olympics.json", function(dataset) {
 
-// Breadcrumb dimensions: width, height, spacing, width of tip/tail.
-var b = {
-  w: 75, h: 30, s: 3, t: 10
-};
+  // Define the dimensions of the visualization.
+  var margin = {top: 30, right: 10, bottom: 20, left: 10},
+      width = 636 - margin.left - margin.right,
+      height = 476 - margin.top - margin.bottom,
+      radius = Math.min(width, height) / 2;
 
-// Mapping of step names to colors.
-var colors = {
-  "usa": "#5687d1",
-  "russia": "#7b615c",
-  "china": "#de783b"
-};
+  // Create the SVG container for the visualization and
+  // define its dimensions. Within that container, add a
+  // group element (`<g>`) that can be transformed via
+  // a translation to account for the margins and to
+  // center the visualization in the container.
+  var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" +
+              (margin.left + width  / 2) + "," +
+              (margin.top  + height / 2) + ")");
 
-// Total size of all segments; we set this later, after loading the data.
-var totalSize = 0;
+  // Define the scales that will translate data values
+  // into visualization properties. The "x" scale
+  // will represent angular position within the
+  // visualization, so it ranges lnearly from 0 to
+  // 2π. The "y" scale will reprent area, so it
+  // ranges from 0 to the full radius of the
+  // visualization. Since area varies as the square
+  // of the radius, this scale takes the square
+  // root of the input domain before mapping to
+  // the output range.
+  var x = d3.scale.linear()
+      .range([0, 2 * Math.PI]);
+  var y = d3.scale.sqrt()
+      .range([0, radius]);
 
-var vis = d3.select("#chart").append("svg:svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("svg:g")
-    .attr("id", "container")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-var partition = d3.partition()
-    .size([2 * Math.PI, radius * radius]);
-
-var arc = d3.arc()
-    .startAngle(function(d) { return d.x0; })
-    .endAngle(function(d) { return d.x1; })
-    .innerRadius(function(d) { return Math.sqrt(d.y0); })
-    .outerRadius(function(d) { return Math.sqrt(d.y1); });
-
-// Use d3.text and d3.csvParseRows so that we do not need to have a header
-// row, and can receive the csv as an array of arrays.
-d3.text("data/exercise-2-toy-data.csv", function(text) {
-  var csv = d3.csvParseRows(text);
-  var json = buildHierarchy(csv);
-  createVisualization(json);
-});
-
-// Main function to draw and set up the visualization, once we have the data.
-function createVisualization(json) {
-
-  // Basic setup of page elements.
-  initializeBreadcrumbTrail();
-  drawLegend();
-  d3.select("#togglelegend").on("click", toggleLegend);
-
-  // Bounding circle underneath the sunburst, to make it easier to detect
-  // when the mouse leaves the parent g.
-  vis.append("svg:circle")
-      .attr("r", radius)
-      .style("opacity", 0);
-
-  // Turn the data into a d3 hierarchy and calculate the sums.
-  var root = d3.hierarchy(json)
-      .sum(function(d) { return d.size; })
-      .sort(function(a, b) { return b.value - a.value; });
-
-  // For efficiency, filter nodes to keep only those large enough to see.
-  var nodes = partition(root).descendants()
-      .filter(function(d) {
-          return (d.x1 - d.x0 > 0.005); // 0.005 radians = 0.29 degrees
+  // Define the function that creates a partition
+  // layout from the dataset. Because we're using
+  // `d3.nest` to construct the input dataset, the
+  // children array will be stored in the `values`
+  // property unless the node is a leaf node. In
+  // that case the `values` property will hold
+  // the data value itself.
+  var partition = d3.layout.partition()
+      .children(function(d) {
+          return Array.isArray(d.values) ?
+              d.values : null;
+      })
+      .value(function(d) {
+          return d.values;
       });
 
-  var path = vis.data([json]).selectAll("path")
-      .data(nodes)
-      .enter().append("svg:path")
-      .attr("display", function(d) { return d.depth ? null : "none"; })
-      .attr("d", arc)
-      .attr("fill-rule", "evenodd")
-      .style("fill", function(d) { return colors[d.data.name]; })
-      .style("opacity", 1)
-      .on("mouseover", mouseover);
+  // Define a function that returns the color
+  // for a data point. The input parameter
+  // should be a data point as defined/created
+  // by the partition layout.
+  var color = function(d) {
 
-  // Add the mouseleave handler to the bounding circle.
-  d3.select("#container").on("mouseleave", mouseleave);
+      // This function builds the total
+      // color palette incrementally so
+      // we don't have to iterate through
+      // the entire data structure.
 
-  // Get total size of the tree = value of root node from partition.
-  totalSize = path.datum().value;
- };
+      // We're going to need a color scale.
+      // Normally we'll distribute the colors
+      // in the scale to child nodes.
+      var colors;
 
-// Fade all but the current sequence, and show it in the breadcrumb trail.
-function mouseover(d) {
+      // The root node is special since
+      // we have to seed it with our
+      // desired palette.
+      if (!d.parent) {
 
-  var percentage = (100 * d.value / totalSize).toPrecision(3);
-  var percentageString = percentage + "%";
-  if (percentage < 0.1) {
-    percentageString = "< 0.1%";
-  }
+          // Create a categorical color
+          // scale to use both for the
+          // root node's immediate
+          // children. We're using the
+          // 10-color predefined scale,
+          // so set the domain to be
+          // [0, ... 9] to ensure that
+          // we can predictably generate
+          // correct individual colors.
+          colors = d3.scale.category10()
+              .domain(d3.range(0,10));
 
-  d3.select("#percentage")
-      .text(percentageString);
+          // White for the root node
+          // itself.
+          d.color = "#fff";
 
-  d3.select("#explanation")
-      .style("visibility", "");
+      } else if (d.children) {
 
-  var sequenceArray = d.ancestors().reverse();
-  sequenceArray.shift(); // remove root node from the array
-  updateBreadcrumbs(sequenceArray, percentageString);
+          // Since this isn't the root node,
+          // we construct the scale from the
+          // node's assigned color. Our scale
+          // will range from darker than the
+          // node's color to brigher than the
+          // node's color.
+          var startColor = d3.hcl(d.color)
+                              .darker(),
+              endColor   = d3.hcl(d.color)
+                              .brighter();
 
-  // Fade all the segments.
-  d3.selectAll("path")
-      .style("opacity", 0.3);
+          // Create the scale
+          colors = d3.scale.linear()
+                  .interpolate(d3.interpolateHcl)
+                  .range([
+                      startColor.toString(),
+                      endColor.toString()
+                  ])
+                  .domain([0,d.children.length+1]);
 
-  // Then highlight only those that are an ancestor of the current segment.
-  vis.selectAll("path")
-      .filter(function(node) {
-                return (sequenceArray.indexOf(node) >= 0);
-              })
-      .style("opacity", 1);
-}
+      }
 
-// Restore everything to full opacity when moving off the visualization.
-function mouseleave(d) {
+      if (d.children) {
 
-  // Hide the breadcrumb trail
-  d3.select("#trail")
-      .style("visibility", "hidden");
+          // Now distribute those colors to
+          // the child nodes. We want to do
+          // it in sorted order, so we'll
+          // have to calculate that. Because
+          // JavaScript sorts arrays in place,
+          // we use a mapped version.
+          d.children.map(function(child, i) {
+              return {value: child.value, idx: i};
+          }).sort(function(a,b) {
+              return b.value - a.value
+          }).forEach(function(child, i) {
+              d.children[child.idx].color = colors(i);
+          });
+      }
 
-  // Deactivate all segments during transition.
-  d3.selectAll("path").on("mouseover", null);
-
-  // Transition each segment to full opacity and then reactivate it.
-  d3.selectAll("path")
-      .transition()
-      .duration(1000)
-      .style("opacity", 1)
-      .on("end", function() {
-              d3.select(this).on("mouseover", mouseover);
-            });
-
-  d3.select("#explanation")
-      .style("visibility", "hidden");
-}
-
-function initializeBreadcrumbTrail() {
-  // Add the svg area.
-  var trail = d3.select("#sequence").append("svg:svg")
-      .attr("width", width)
-      .attr("height", 50)
-      .attr("id", "trail");
-  // Add the label at the end, for the percentage.
-  trail.append("svg:text")
-    .attr("id", "endlabel")
-    .style("fill", "#000");
-}
-
-// Generate a string that describes the points of a breadcrumb polygon.
-function breadcrumbPoints(d, i) {
-  var points = [];
-  points.push("0,0");
-  points.push(b.w + ",0");
-  points.push(b.w + b.t + "," + (b.h / 2));
-  points.push(b.w + "," + b.h);
-  points.push("0," + b.h);
-  if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
-    points.push(b.t + "," + (b.h / 2));
-  }
-  return points.join(" ");
-}
-
-// Update the breadcrumb trail to show the current sequence and percentage.
-function updateBreadcrumbs(nodeArray, percentageString) {
-
-  // Data join; key function combines name and depth (= position in sequence).
-  var trail = d3.select("#trail")
-      .selectAll("g")
-      .data(nodeArray, function(d) { return d.data.name + d.depth; });
-
-  // Remove exiting nodes.
-  trail.exit().remove();
-
-  // Add breadcrumb and label for entering nodes.
-  var entering = trail.enter().append("svg:g");
-
-  entering.append("svg:polygon")
-      .attr("points", breadcrumbPoints)
-      .style("fill", function(d) { return colors[d.data.name]; });
-
-  entering.append("svg:text")
-      .attr("x", (b.w + b.t) / 2)
-      .attr("y", b.h / 2)
-      .attr("dy", "0.35em")
-      .attr("text-anchor", "middle")
-      .text(function(d) { return d.data.name; });
-
-  // Merge enter and update selections; set position for all nodes.
-  entering.merge(trail).attr("transform", function(d, i) {
-    return "translate(" + i * (b.w + b.s) + ", 0)";
-  });
-
-  // Now move and update the percentage at the end.
-  d3.select("#trail").select("#endlabel")
-      .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
-      .attr("y", b.h / 2)
-      .attr("dy", "0.35em")
-      .attr("text-anchor", "middle")
-      .text(percentageString);
-
-  // Make the breadcrumb trail visible, if it's hidden.
-  d3.select("#trail")
-      .style("visibility", "");
-
-}
-
-function drawLegend() {
-
-  // Dimensions of legend item: width, height, spacing, radius of rounded rect.
-  var li = {
-    w: 75, h: 30, s: 3, r: 3
+      return d.color;
   };
 
-  var legend = d3.select("#legend").append("svg:svg")
-      .attr("width", li.w)
-      .attr("height", d3.keys(colors).length * (li.h + li.s));
+  // Define the function that constructs the
+  // path for an arc corresponding to a data
+  // value.
+  var arc = d3.svg.arc()
+      .startAngle(function(d) {
+          return Math.max(0,
+              Math.min(2 * Math.PI, x(d.x)));
+      })
+      .endAngle(function(d) {
+          return Math.max(0,
+              Math.min(2 * Math.PI, x(d.x + d.dx)));
+      })
+      .innerRadius(function(d) {
+          return Math.max(0, y(d.y));
+      })
+      .outerRadius(function(d) {
+          return Math.max(0, y(d.y + d.dy));
+      });
 
-  var g = legend.selectAll("g")
-      .data(d3.entries(colors))
-      .enter().append("svg:g")
-      .attr("transform", function(d, i) {
-              return "translate(0," + i * (li.h + li.s) + ")";
-           });
+  // Extract the hierachy from the raw data
+  // Using `d3.nest` operations. The data's
+  // hierarchy is region -> state -> county.
+  // At the county level, we're only interested
+  // in a count of the data points.
+  var hierarchy = {
+      key: "Olympic Medals",
+      values: d3.nest()
+          .key(function(d) { return d.Country; })
+          .key(function(d) { return d.Year; })
+          .key(function(d) { return d.Gender; })
+          .key(function(d) { return d.Sport; })
+          .rollup(function(leaves) {
+              return leaves.length;
+          })
+          .entries(dataset)
+  };
 
-  g.append("svg:rect")
-      .attr("rx", li.r)
-      .attr("ry", li.r)
-      .attr("width", li.w)
-      .attr("height", li.h)
-      .style("fill", function(d) { return d.value; });
+  // Construct the visualization.
+  var path = svg.selectAll("path")
+      .data(partition.nodes(hierarchy))
+    .enter().append("path")
+      .attr("d", arc)
+      .attr("stroke", "#fff")
+      .attr("fill-rule", "evenodd")
+      .attr("fill", color)
+      .on("click", click)
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
 
-  g.append("svg:text")
-      .attr("x", li.w / 2)
-      .attr("y", li.h / 2)
-      .attr("dy", "0.35em")
+  // Add a container for the tooltip.
+  var tooltip = svg.append("text")
+      .attr("font-size", 12)
+      .attr("fill", "#000")
+      .attr("fill-opacity", 0)
       .attr("text-anchor", "middle")
-      .text(function(d) { return d.key; });
-}
+      .attr("transform", "translate(" + 0 + "," + (0)  +")")
+      .style("pointer-events", "none");
 
-function toggleLegend() {
-  var legend = d3.select("#legend");
-  if (legend.style("visibility") == "hidden") {
-    legend.style("visibility", "");
-  } else {
-    legend.style("visibility", "hidden");
+  // Add the title.
+  svg.append("text")
+      .attr("font-size", 16)
+      .attr("fill", "#000")
+      .attr("text-anchor", "middle")
+      .attr("transform", "translate(" + 0 + "," + (-10 -height/2)  +")")
+      .text("Total Olympic Medal Counts");
+
+  // Handle clicks on data points. All
+  // we need to do is start the transition
+  // that updates the paths of the arcs.
+  function click(d) {
+      path.transition()
+          .duration(750)
+          .attrTween("d", arcTween(d));
+      // Hide the tooltip since the
+      // path "underneath" the cursor
+      // will likely have changed.
+      mouseout();
+  };
+
+  // Handle mouse moving over a data point
+  // by enabling the tooltip.
+  function mouseover(d) {
+      tooltip.text(d.key + ": " +
+          d.value + " medal" +
+          (d.value > 1 ? "s" : ""))
+          .transition()
+          .attr("fill-opacity", 1);
+  };
+
+  // Handle mouse leaving a data point
+  // by disabling the tooltip.
+  function mouseout() {
+      tooltip.transition()
+          .attr("fill-opacity", 0);
+  };
+
+  // Function to interpolate values for
+  // the visualization elements during
+  // a transition.
+  function arcTween(d) {
+      var xd = d3.interpolate(x.domain(),
+                  [d.x, d.x + d.dx]),
+          yd = d3.interpolate(y.domain(),
+                  [d.y, 1]),
+          yr = d3.interpolate(y.range(),
+                  [d.y ? 20 : 0, radius]);
+      return function(d, i) {
+          return i ?
+              function(t) {
+                  return arc(d);
+              } :
+              function(t) {
+                  x.domain(xd(t));
+                  y.domain(yd(t)).range(yr(t));
+                  return arc(d);
+              };
+      };
   }
-}
-
-// Take a 2-column CSV and transform it into a hierarchical structure suitable
-// for a partition layout. The first column is a sequence of step names, from
-// root to leaf, separated by hyphens. The second column is a count of how
-// often that sequence occurred.
-function buildHierarchy(csv) {
-  var root = {"name": "root", "children": []};
-  for (var i = 0; i < csv.length; i++) {
-    var sequence = csv[i][0];
-    var size = +csv[i][1];
-    if (isNaN(size)) { // e.g. if this is a header row
-      continue;
-    }
-    var parts = sequence.split("-");
-    var currentNode = root;
-    for (var j = 0; j < parts.length; j++) {
-      var children = currentNode["children"];
-      var nodeName = parts[j];
-      var childNode;
-      if (j + 1 < parts.length) {
-   // Not yet at the end of the sequence; move down the tree.
- 	var foundChild = false;
- 	for (var k = 0; k < children.length; k++) {
- 	  if (children[k]["name"] == nodeName) {
- 	    childNode = children[k];
- 	    foundChild = true;
- 	    break;
- 	  }
- 	}
-  // If we don't already have a child node for this branch, create it.
- 	if (!foundChild) {
- 	  childNode = {"name": nodeName, "children": []};
- 	  children.push(childNode);
- 	}
- 	currentNode = childNode;
-      } else {
- 	// Reached the end of the sequence; create a leaf node.
- 	childNode = {"name": nodeName, "size": size};
- 	children.push(childNode);
-      }
-    }
-  }
-  return root;
-};
-
-
-
-
-
-
-// // var data = d3.json("data/exercise2-olympics-min.json", function(data) {
-// //   console.log(data[0]);
-// // });
-//
-// // var data = d3.json("data/exercise2-olympics-min.json", function(data) {});
-// // console.log(data[0]);
-//
-//
-// // set the dimensions of the canvas
-// var margin = {top: 20, right: 20, bottom: 70, left: 40},
-//     width = 600 - margin.left - margin.right,
-//     height = 300 - margin.top - margin.bottom;
-//
-//
-// // set the ranges
-// var x = d3.scaleOrdinal().rangeRoundBands([0, width], .05);
-//
-// var y = d3.scaleLinear().range([height, 0]);
-//
-// // define the axis
-// var xAxis = d3.svg.axis()
-//     .scale(x)
-//     .orient("bottom")
-//
-//
-// var yAxis = d3.svg.axis()
-//     .scale(y)
-//     .orient("left")
-//     .ticks(10);
-//
-//
-// // add the SVG element
-// var svg = d3.select("body").append("svg")
-//     .attr("width", width + margin.left + margin.right)
-//     .attr("height", height + margin.top + margin.bottom)
-//   .append("g")
-//     .attr("transform",
-//           "translate(" + margin.left + "," + margin.top + ")");
-//
-//
-// // load the data
-// d3.json("data/exercise2-olympics-min.json", function(error, data) {
-//
-//     data.forEach(function(d) {
-//         d.Country = d.Country;
-//         d.Medal = +d.Medal;
-//     });
-//
-//   // scale the range of the data
-//   x.domain(data.map(function(d) { return d.Country; }));
-//   y.domain([0, d3.max(data, function(d) { return d.Medal; })]);
-//
-//   // add axis
-//   svg.append("g")
-//       .attr("class", "x axis")
-//       .attr("transform", "translate(0," + height + ")")
-//       .call(xAxis)
-//     .selectAll("text")
-//       .style("text-anchor", "end")
-//       .attr("dx", "-.8em")
-//       .attr("dy", "-.55em")
-//       .attr("transform", "rotate(-90)" );
-//
-//   svg.append("g")
-//       .attr("class", "y axis")
-//       .call(yAxis)
-//     .append("text")
-//       .attr("transform", "rotate(-90)")
-//       .attr("y", 5)
-//       .attr("dy", ".71em")
-//       .style("text-anchor", "end")
-//       .text("Medaluency");
-//
-//
-//   // Add bar chart
-//   svg.selectAll("bar")
-//       .data(data)
-//     .enter().append("rect")
-//       .attr("class", "bar")
-//       .attr("x", function(d) { return x(d.Country); })
-//       .attr("width", x.rangeBand())
-//       .attr("y", function(d) { return y(d.Medal); })
-//       .attr("height", function(d) { return height - y(d.Medal); });
-//
-// });
+});
