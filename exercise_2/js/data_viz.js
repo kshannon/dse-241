@@ -10,12 +10,12 @@ var b = {
 
 // Mapping of step names to colors.
 var colors = {
-  "home": "#5687d1",
-  "product": "#7b615c",
-  "search": "#de783b",
-  "account": "#6ab975",
-  "other": "#a173d1",
-  "end": "#bbbbbb"
+  "u.s.": "#3680d1",
+  "russia": "#7b615c",
+  "1994": "#de783b",
+  "china": "#6ab975",
+  "skiing": "#a173d1",
+  "male": "#bbbbbb"
 };
 
 // Total size of all segments; we set this later, after loading the data.
