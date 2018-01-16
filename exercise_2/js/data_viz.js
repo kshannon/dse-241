@@ -4,8 +4,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Define the dimensions of the visualization.
   var margin = {top: 30, right: 10, bottom: 20, left: 10},
-      width = 1.5*636 - margin.left - margin.right,
-      height = 1.5*476 - margin.top - margin.bottom,
+      width = 600 - margin.left - margin.right,
+      height = 600 - margin.top - margin.bottom,
       radius = Math.min(width, height) / 2;
 
   // Create the SVG container for the visualization and
@@ -87,7 +87,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
           // White for the root node
           // itself. Center circle
-          d.color = "#fff"; 
+          d.color = "#fff";
 
       } else if (d.children) {
 
@@ -182,15 +182,22 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Add a container for the tooltip.
   var tooltip = svg.append("text")
-      .attr("font-size", 12)
+      .attr("font-size", 16)
+      .attr("font-weight", "bolder")
+      // .attr("background-color", "white")
       .attr("fill", "#000")
       .attr("fill-opacity", 0)
       .attr("text-anchor", "middle")
       .style("pointer-events", "none");
 
+   // var imgtip = svg.append("svg:image")
+   //    .attr('xlink:href','img/'+ toString(d.key)+'.png')
+   //    .attr("width", 64)
+   //    .attr("height", 64);
+
   // Add the title.
   svg.append("text")
-      .attr("font-size", 16)
+      .attr("font-size", 18)
       .attr("fill", "#000")
       .attr("text-anchor", "middle")
       .attr("transform", "translate(" + 0 + "," + (-10 -height/2)  +")")
@@ -219,6 +226,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           (d.value > 1 ? "s" : ""))
           .transition()
           .attr("fill-opacity", 1);
+       // imgtip.image(d)
+       //    .attr("fill-opacity", 1);
   };
 
   // Handle mouse leaving a data point
@@ -226,6 +235,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   function mouseout() {
       tooltip.transition()
           .attr("fill-opacity", 0);
+      // imgtip.transition()
+      //     .attr("fill-opacity", 0);
   };
 
   // Function to interpolate values for
