@@ -22,10 +22,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               (margin.top  + height / 2) + ")");
 
 
-
-
-
-
   // Define the scales that will translate data values
   // into visualization properties. The "x" scale
   // will represent angular position within the
@@ -39,7 +35,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   var x = d3.scale.linear()
       .range([0, 2 * Math.PI]);
   var y = d3.scale.sqrt()
-      .range([0, radius]);
+      .range([10, radius]);
 
   // Define the function that creates a partition
   // layout from the dataset. Because we're using
@@ -145,6 +141,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // Define the function that constructs the
   // path for an arc corresponding to a data
   // value.
+  var inter_ring_spacing = 4.0
   var arc = d3.svg.arc()
       .startAngle(function(d) {
           return Math.max(0,
@@ -155,7 +152,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               Math.min(2 * Math.PI, x(d.x + d.dx)));
       })
       .innerRadius(function(d) {
-          return Math.max(0, y(d.y));
+          return Math.max(0, y(d.y) + inter_ring_spacing);
       })
       .outerRadius(function(d) {
           return Math.max(0, y(d.y + d.dy));
@@ -188,7 +185,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .on("click", click)
       .on("mouseover", mouseover)
       .on("mouseout", mouseout);
-
 
   // Add a container for the tooltip.
   var tooltip = svg.append("text")
@@ -228,6 +224,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   var formatComma = d3.format(",")  // Add comma into numbers for thousands place
 
+
   // Handle mouse moving over a data point
   // by enabling the tooltip.
   function mouseover(d) {
@@ -239,6 +236,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
        // imgtip.image(d)
        //    .attr("fill-opacity", 1);
   };
+ 
 
   // Handle mouse leaving a data point
   // by disabling the tooltip.
