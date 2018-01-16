@@ -1,3 +1,5 @@
+// var div = d3.select("#chart").append("svg").append("div")
+
 d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Define the dimensions of the visualization.
@@ -11,7 +13,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // group element (`<g>`) that can be transformed via
   // a translation to account for the margins and to
   // center the visualization in the container.
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select("#sunburst-viz").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
