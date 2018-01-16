@@ -49,7 +49,10 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // that case the `values` property will hold
   // the data value itself.
   var partition = d3.layout.partition()
+      .sort(function(a, b) { return d3.ascending(a.Country, b.Country); })
       .sort(function(a, b) { return d3.ascending(a.Year, b.Year); })
+      .sort(function(a, b) { return d3.ascending(a.Gender, b.Gender); })
+      .sort(function(a, b) { return d3.ascending(a.Sport, b.Sport); })
       .children(function(d) {
           return Array.isArray(d.values) ?
               d.values : null;
