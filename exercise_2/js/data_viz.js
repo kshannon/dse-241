@@ -168,7 +168,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       key: "Olympic Medals",
       values: d3.nest()
           .key(function(d) { return d.Country; })
-          .key(function(d) { return d.Year; }).sortKeys(d3.ascending)
+          .key(function(d) { return d.Year; })
           .key(function(d) { return d.Gender; })
           .key(function(d) { return d.Sport; })
           .rollup(function(leaves) {
