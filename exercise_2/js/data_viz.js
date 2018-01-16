@@ -4,8 +4,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Define the dimensions of the visualization.
   var margin = {top: 30, right: 10, bottom: 20, left: 10},
-      width = 636 - margin.left - margin.right,
-      height = 476 - margin.top - margin.bottom,
+      width = 1.5*636 - margin.left - margin.right,
+      height = 1.5*476 - margin.top - margin.bottom,
       radius = Math.min(width, height) / 2;
 
   // Create the SVG container for the visualization and
@@ -16,7 +16,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   var svg = d3.select("#sunburst-viz").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
-    .append("g")
+      .append("g")
       .attr("transform", "translate(" +
               (margin.left + width  / 2) + "," +
               (margin.top  + height / 2) + ")");
@@ -86,8 +86,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               .domain(d3.range(0,10));
 
           // White for the root node
-          // itself.
-          d.color = "#fff";
+          // itself. Center circle
+          d.color = "#fff"; 
 
       } else if (d.children) {
 
@@ -154,14 +154,12 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Extract the hierachy from the raw data
   // Using `d3.nest` operations. The data's
-  // hierarchy is region -> state -> county.
-  // At the county level, we're only interested
-  // in a count of the data points.
+  // hierarchy is Country->Year->Gender->Sport
   var hierarchy = {
       key: "Olympic Medals",
       values: d3.nest()
           .key(function(d) { return d.Country; })
-          .key(function(d) { return d.Year; })
+          .key(function(d) { return d.Year; }).sortKeys(d3.ascending)
           .key(function(d) { return d.Gender; })
           .key(function(d) { return d.Sport; })
           .rollup(function(leaves) {
@@ -188,7 +186,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .attr("fill", "#000")
       .attr("fill-opacity", 0)
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(" + 0 + "," + (0)  +")")
       .style("pointer-events", "none");
 
   // Add the title.
@@ -212,11 +209,13 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       mouseout();
   };
 
+  var formatComma = d3.format(",")  // Add comma into numbers for thousands place
+
   // Handle mouse moving over a data point
   // by enabling the tooltip.
   function mouseover(d) {
       tooltip.text(d.key + ": " +
-          d.value + " medal" +
+          formatComma(d.value) + " medal" +
           (d.value > 1 ? "s" : ""))
           .transition()
           .attr("fill-opacity", 1);
