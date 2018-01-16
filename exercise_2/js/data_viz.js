@@ -21,6 +21,11 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               (margin.left + width  / 2) + "," +
               (margin.top  + height / 2) + ")");
 
+
+
+
+
+
   // Define the scales that will translate data values
   // into visualization properties. The "x" scale
   // will represent angular position within the
@@ -44,6 +49,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // that case the `values` property will hold
   // the data value itself.
   var partition = d3.layout.partition()
+      .sort(function(a, b) { return d3.ascending(a.Year, b.Year); })
       .children(function(d) {
           return Array.isArray(d.values) ?
               d.values : null;
@@ -180,6 +186,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .on("mouseover", mouseover)
       .on("mouseout", mouseout);
 
+
   // Add a container for the tooltip.
   var tooltip = svg.append("text")
       .attr("font-size", 16)
@@ -237,6 +244,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           .attr("fill-opacity", 0);
       // imgtip.transition()
       //     .attr("fill-opacity", 0);
+
   };
 
   // Function to interpolate values for
