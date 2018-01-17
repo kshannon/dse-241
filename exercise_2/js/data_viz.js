@@ -50,12 +50,15 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .sort(function(a, b) { return (a.Gender > b.Gender); })
       .sort(function(a, b) { return (a.Sport > b.Sport); })
       .children(function(d) {
+          // console.log(d.values)
           return Array.isArray(d.values) ?
               d.values : null;
       })
       .value(function(d) {
+          // console.log(d.values)
           return d.values;
       });
+
 
   // Define a function that returns the color
   // for a data point. The input parameter
@@ -236,7 +239,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
        // imgtip.image(d)
        //    .attr("fill-opacity", 1);
   };
- 
+
 
   // Handle mouse leaving a data point
   // by disabling the tooltip.
