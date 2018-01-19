@@ -32,6 +32,9 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // of the radius, this scale takes the square
   // root of the input domain before mapping to
   // the output range.
+
+  // var x = d3.scaleLinear().range([0,2 * Math.PI]);  --V4 TODO
+  // var y = d3.scaleSqrt().range([10, radius]);  --V4 TODO
   var x = d3.scale.linear()
       .range([0, 2 * Math.PI]);
   var y = d3.scale.sqrt()
@@ -44,13 +47,15 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // property unless the node is a leaf node. In
   // that case the `values` property will hold
   // the data value itself.
+
+  // var partition = d3.partition() --V4 TODO
   var partition = d3.layout.partition()
-      .sort(function(a, b) { return (a.Country > b.Country); })
-      .sort(function(a, b) { return (a.Year > b.Year); })
-      .sort(function(a, b) { return (a.Gender > b.Gender); })
-      .sort(function(a, b) { return (a.Sport > b.Sport); })
+      // .sort(function(a, b) { return (a.Country > b.Country); })
+      .sort(function(a, b) { console.log('yearyearyear'); return (a.Year > b.Year); })
+      // .sort(function(a, b) { return (a.Gender > b.Gender); })
+      // .sort(function(a, b) { return (a.Sport > b.Sport); })
       .children(function(d) {
-          // console.log(d.values)
+          //console.log(d.values)
           return Array.isArray(d.values) ?
               d.values : null;
       })
@@ -90,6 +95,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           // [0, ... 9] to ensure that
           // we can predictably generate
           // correct individual colors.
+
+          // colors = d3.schemeCategory10() --V4 TODO
           colors = d3.scale.category10()
               .domain(d3.range(0,10));
 
@@ -111,7 +118,10 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
                               .brighter();
 
           // Create the scale
+
+          // colors = d3.scaleLinear() --V4 TODO
           colors = d3.scale.linear()
+                  // .interpolate(d3.interpolateHclLong) --V4 TODO
                   .interpolate(d3.interpolateHcl)
                   .range([
                       startColor.toString(),
