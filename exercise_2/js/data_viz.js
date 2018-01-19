@@ -34,21 +34,21 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   var formatComma = d3.format(",")  // Add comma into numbers for thousands place
 
-
   // Medals won appears when mouse goes over arc
   function mouseover(d) {
-      medalsWon.text(d.key + ": " +
+
+      var medalCount = d.key + ": " +
           formatComma(d.value) + " medal" +
-          (d.value > 1 ? "s" : ""))
+          (d.value > 1 ? "s" : "");
+
+      medalsWon.text(medalCount)
           .transition()
           .attr("fill-opacity", 1);
   };
 
   // Medals won disappears when mouse goes out of arc
   function mouseout() {
-      medalsWon.transition()
-          .attr("fill-opacity", 0);
-
+      medalsWon.transition().attr("fill-opacity", 0);
   };
 
   // Function to define the color for the data d
@@ -62,8 +62,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           // so that every country has its own color
 
           // colors = d3.schemeCategory10() --V4 TODO
-          colors = d3.scale.category10()
-              .domain(d3.range(0,10));
+          colors = d3.scale.category10().domain(d3.range(0,10));
 
           // White for the center circle
           d.color = "#fff";
@@ -72,10 +71,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
           // Children of a node are progressively brighter
           // in color magnitude channel
-          var startColor = d3.hcl(d.color)
-                              .darker(),
-              endColor   = d3.hcl(d.color)
-                              .brighter();
+          var startColor = d3.hcl(d.color).darker(),
+              endColor   = d3.hcl(d.color).brighter();
 
           // Create the color scale
 
@@ -212,6 +209,5 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .attr("text-anchor", "middle")
       .attr("transform", "translate(" + 0 + "," + (-height/2 - 8)  +")")
       .text("Total Olympic Medal Counts");
-
 
 });
