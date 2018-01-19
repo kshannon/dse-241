@@ -61,8 +61,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           // Create a categorical color scale
           // so that every country has its own color
 
-          // colors = d3.schemeCategory10() --V4 TODO
-          colors = d3.scale.category10().domain(d3.range(0,10));
+          colors = d3.schemeCategory10().domain(d3.range(0,10)); // --V4 TODO
+          // colors = d3.scale.category10().domain(d3.range(0,10));
 
           // White for the center circle
           d.color = "#fff";
@@ -76,10 +76,10 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
           // Create the color scale
 
-          // colors = d3.scaleLinear() --V4 TODO
-          colors = d3.scale.linear()
-                  // .interpolate(d3.interpolateHclLong) --V4 TODO
-                  .interpolate(d3.interpolateHcl)
+          colors = d3.scaleLinear() //--V4 TODO
+          // colors = d3.scale.linear()
+                  .interpolate(d3.interpolateHclLong) //--V4 TODO
+                  // .interpolate(d3.interpolateHcl)
                   .range([
                       startColor.toString(),
                       endColor.toString()
@@ -121,36 +121,38 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               (margin.top  + height / 2) + ")");
 
 
-  // var x = d3.scaleLinear().range([0,2 * Math.PI]);  --V4 TODO
-  // var y = d3.scaleSqrt().range([10, radius]);  --V4 TODO
-  var x = d3.scale.linear()
-      .range([0, 2 * Math.PI]);
-  var y = d3.scale.sqrt()
-      .range([9, radius]);
+  var x = d3.scaleLinear().range([0,2 * Math.PI]); // --V4 TODO
+  var y = d3.scaleSqrt().range([10, radius]);  //--V4 TODO
+  // var x = d3.scale.linear()
+  //     .range([0, 2 * Math.PI]);
+  // var y = d3.scale.sqrt()
+  //     .range([9, radius]);
 
   // Use d3.nest property to create hierarchical tree
   // of the JSON dataset.
 
-  // var partition = d3.partition() --V4 TODO
-  var partition = d3.layout.partition()
-      // .sort(function(a, b) { return (a.Country > b.Country); })
-      .sort(function(a, b) { return (a.Year > b.Year); })
-      // .sort(function(a, b) { return (a.Gender > b.Gender); })
-      // .sort(function(a, b) { return (a.Sport > b.Sport); })
-      .children(function(d) {
-          //console.log(d.values)
-          return Array.isArray(d.values) ? d.values : null;
-      })
-      .value(function(d) {
-          return d.values;
-      });
+
+// function(d) { return d.children ? 0 : 1; }.
+  // var partition = d3.partition() //--V4 TODO
+  // // var partition = d3.layout.partition()
+  //     // .sort(function(a, b) { return (a.Country > b.Country); })
+  //     //.sort(function(a, b) { return (a.Year > b.Year); })
+  //     // .sort(function(a, b) { return (a.Gender > b.Gender); })
+  //     // .sort(function(a, b) { return (a.Sport > b.Sport); })
+  //     //.children(function(d) {
+  //         //console.log(d.values)
+  //         //return Array.isArray(d.values) ? d.values : null;
+  //     //})
+  //     value(function(d) {
+  //         return d.values;
+  //     });
 
 
   // This creates the concentric rings based
-  //  on individual arcs. Arc length is proportional to 
-  //  percentage of medals for that category. 
+  //  on individual arcs. Arc length is proportional to
+  //  percentage of medals for that category.
   var inter_ring_spacing = 4.0
-  var arc = d3.svg.arc()
+  var arc = d3.arc()
       .startAngle(function(d) {
           return Math.max(0,
               Math.min(2 * Math.PI, x(d.x)));
@@ -184,8 +186,9 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Construct the visualization.
   var path = svg.selectAll("path")
-      .data(partition.nodes(hierarchy))
-    .enter().append("path")
+      // .data(partition.nodes(hierarchy))
+      .data(console.log(hierarchy))
+      .enter().append("path")
       .attr("d", arc)
       .attr("stroke", "#fff")
       .attr("fill-rule", "evenodd")
