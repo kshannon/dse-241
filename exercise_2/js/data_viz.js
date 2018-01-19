@@ -2,6 +2,8 @@
 d3.json("data/exercise2-olympics.json", function(dataset) {
 
 
+
+
   // Animation for changing the concentric rings when
   // one of them is clicked.
   function arcTween(d) {
@@ -133,7 +135,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
 
 // function(d) { return d.children ? 0 : 1; }.
-  // var partition = d3.partition() //--V4 TODO
+  //var partition = d3.partition() //--V4 TODO
   // // var partition = d3.layout.partition()
   //     // .sort(function(a, b) { return (a.Country > b.Country); })
   //     //.sort(function(a, b) { return (a.Year > b.Year); })
@@ -146,6 +148,19 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   //     value(function(d) {
   //         return d.values;
   //     });
+  // var partition = d3.partition()
+  //     .size([2 * Math.PI, radius * radius]);
+
+  // Turn the data into a d3 hierarchy and calculate the sums.
+  var root = d3.hierarchy(dataset)
+      .sum(function(d) { return d.size; })
+      .sort(function(a, b) { return b.Year - a.Year; });
+
+  // For efficiency, filter nodes to keep only those large enough to see.
+  var nodes = d3.partition(root)//.descendants();
+      // .filter(function(d) {
+      //     return (d.x1 - d.x0 > 0.005); // 0.005 radians = 0.29 degrees
+      // });
 
 
   // This creates the concentric rings based
@@ -186,8 +201,9 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Construct the visualization.
   var path = svg.selectAll("path")
+      .data(nodes)
       // .data(partition.nodes(hierarchy))
-      .data(console.log(hierarchy))
+      //.data(console.log(hierarchy))
       .enter().append("path")
       .attr("d", arc)
       .attr("stroke", "#fff")
