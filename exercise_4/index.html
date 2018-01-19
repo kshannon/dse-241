@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset='utf-8'>
+      <title>Olympic Medals</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles.css" />
+      <script type="text/javascript" src='js/d3.js'></script>
+      <script type="text/javascript" src="js/data_viz.js"></script>
+  </head>
+
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <h1>Exploring the Top 10 Winter Olympic Countries</h1>
+              </div>
+          </div>
+          <div class="row">
+              <br />
+              <br />
+          </div>
+          <div class="row">
+              <div class="col-sm-8 container-border" style="background-color: white">
+                  <div class="row">
+                      <div class="col-sm-2 country-flags">
+                          1. <img src="img/germany.png">
+                          2. <img src="img/norway.png">
+                          3. <img src="img/russia.png">
+                          4. <img src="img/usa.png">
+                          5. <img src="img/austria.png">
+                          6. <img src="img/finland.png">
+                          7. <img src="img/canada.png">
+                          8. <img src="img/switzerland.png">
+                          9. <img src="img/sweden.png">
+                          10. <img id="italy-flag" src="img/italy.png">
+                      </div>
+                      <div class="col-sm-10">
+                          <div id="olympics-viz" ></div>
+                      </div>
+                  </div>
+                  <!-- load the d3 visual -->
+
+              </div>
+              <div class="col-sm-4 container-border" style="background-color: white">
+                  <h5>Explore this Visual to learn about the top Winter Olympic Countries</h5>
+                  <br />
+                  <p>
+                      Ring Layers:
+                      <ol>
+                          <li>Country</li>
+                          <li>Year</li>
+                          <li>Gender</li>
+                          <li>Sport</li>
+                      </ol>
+                      Hover over the individual layers and elements to find out how many medals are asscoaited with that element.
+                  </p>
+                  <p>
+                      Click an element to zoom the visual into that layer. the clicked element will become the new root, and the corresponding country's data will become the new rings. Click the center again to zoom out by one ring level.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </body>
+</html>
