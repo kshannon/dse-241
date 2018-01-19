@@ -1,123 +1,83 @@
-// var div = d3.select("#chart").append("svg").append("div")
 
 d3.json("data/exercise2-olympics.json", function(dataset) {
 
-  // Define the dimensions of the visualization.
-  var margin = {top: 30, right: 10, bottom: 20, left: 10},
-      width = 600 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom,
-      radius = Math.min(width, height) / 2;
 
-  // Create the SVG container for the visualization and
-  // define its dimensions. Within that container, add a
-  // group element (`<g>`) that can be transformed via
-  // a translation to account for the margins and to
-  // center the visualization in the container.
-  var svg = d3.select("#sunburst-viz").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" +
-              (margin.left + width  / 2) + "," +
-              (margin.top  + height / 2) + ")");
+  // Animation for changing the concentric rings when
+  // one of them is clicked.
+  function arcTween(d) {
+      var xd = d3.interpolate(x.domain(),
+                  [d.x, d.x + d.dx]),
+          yd = d3.interpolate(y.domain(),
+                  [d.y, 1]),
+          yr = d3.interpolate(y.range(),
+                  [d.y ? 20 : 0, radius]);
+      return function(d, i) {
+          return i ?
+              function(t) {
+                  return arc(d);
+              } :
+              function(t) {
+                  x.domain(xd(t));
+                  y.domain(yd(t)).range(yr(t));
+                  return arc(d);
+              };
+      };
+  }
 
+  // Handle clicks on arcs (data points)
+  function click(d) {
+      path.transition()
+          .duration(750)
+          .attrTween("d", arcTween(d));
+      mouseout();
+  };
 
-  // Define the scales that will translate data values
-  // into visualization properties. The "x" scale
-  // will represent angular position within the
-  // visualization, so it ranges lnearly from 0 to
-  // 2π. The "y" scale will reprent area, so it
-  // ranges from 0 to the full radius of the
-  // visualization. Since area varies as the square
-  // of the radius, this scale takes the square
-  // root of the input domain before mapping to
-  // the output range.
-
-  // var x = d3.scaleLinear().range([0,2 * Math.PI]);  --V4 TODO
-  // var y = d3.scaleSqrt().range([10, radius]);  --V4 TODO
-  var x = d3.scale.linear()
-      .range([0, 2 * Math.PI]);
-  var y = d3.scale.sqrt()
-      .range([10, radius]);
-
-  // Define the function that creates a partition
-  // layout from the dataset. Because we're using
-  // `d3.nest` to construct the input dataset, the
-  // children array will be stored in the `values`
-  // property unless the node is a leaf node. In
-  // that case the `values` property will hold
-  // the data value itself.
-
-  // var partition = d3.partition() --V4 TODO
-  var partition = d3.layout.partition()
-      // .sort(function(a, b) { return (a.Country > b.Country); })
-      .sort(function(a, b) { console.log('yearyearyear'); return (a.Year > b.Year); })
-      // .sort(function(a, b) { return (a.Gender > b.Gender); })
-      // .sort(function(a, b) { return (a.Sport > b.Sport); })
-      .children(function(d) {
-          //console.log(d.values)
-          return Array.isArray(d.values) ?
-              d.values : null;
-      })
-      .value(function(d) {
-          // console.log(d.values)
-          return d.values;
-      });
+  var formatComma = d3.format(",")  // Add comma into numbers for thousands place
 
 
-  // Define a function that returns the color
-  // for a data point. The input parameter
-  // should be a data point as defined/created
-  // by the partition layout.
+  // Medals won appears when mouse goes over arc
+  function mouseover(d) {
+      medalsWon.text(d.key + ": " +
+          formatComma(d.value) + " medal" +
+          (d.value > 1 ? "s" : ""))
+          .transition()
+          .attr("fill-opacity", 1);
+  };
+
+  // Medals won disappears when mouse goes out of arc
+  function mouseout() {
+      medalsWon.transition()
+          .attr("fill-opacity", 0);
+
+  };
+
+  // Function to define the color for the data d
   var color = function(d) {
 
-      // This function builds the total
-      // color palette incrementally so
-      // we don't have to iterate through
-      // the entire data structure.
-
-      // We're going to need a color scale.
-      // Normally we'll distribute the colors
-      // in the scale to child nodes.
       var colors;
 
-      // The root node is special since
-      // we have to seed it with our
-      // desired palette.
       if (!d.parent) {
 
-          // Create a categorical color
-          // scale to use both for the
-          // root node's immediate
-          // children. We're using the
-          // 10-color predefined scale,
-          // so set the domain to be
-          // [0, ... 9] to ensure that
-          // we can predictably generate
-          // correct individual colors.
+          // Create a categorical color scale
+          // so that every country has its own color
 
           // colors = d3.schemeCategory10() --V4 TODO
           colors = d3.scale.category10()
               .domain(d3.range(0,10));
 
-          // White for the root node
-          // itself. Center circle
+          // White for the center circle
           d.color = "#fff";
 
       } else if (d.children) {
 
-          // Since this isn't the root node,
-          // we construct the scale from the
-          // node's assigned color. Our scale
-          // will range from darker than the
-          // node's color to brigher than the
-          // node's color.
+          // Children of a node are progressively brighter
+          // in color magnitude channel
           var startColor = d3.hcl(d.color)
                               .darker(),
               endColor   = d3.hcl(d.color)
                               .brighter();
 
-          // Create the scale
+          // Create the color scale
 
           // colors = d3.scaleLinear() --V4 TODO
           colors = d3.scale.linear()
@@ -133,12 +93,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
       if (d.children) {
 
-          // Now distribute those colors to
-          // the child nodes. We want to do
-          // it in sorted order, so we'll
-          // have to calculate that. Because
-          // JavaScript sorts arrays in place,
-          // we use a mapped version.
+          // Children color scheme
           d.children.map(function(child, i) {
               return {value: child.value, idx: i};
           }).sort(function(a,b) {
@@ -151,9 +106,52 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       return d.color;
   };
 
-  // Define the function that constructs the
-  // path for an arc corresponding to a data
-  // value.
+  // Define the dimensions of the circles visualization.
+
+  var total_width = 600, total_height = 600;
+  var margin = {top: 30, right: 30, bottom: 30, left: 30},
+      width = total_width - margin.left - margin.right,
+      height = total_height - margin.top - margin.bottom,
+      radius = Math.min(width, height) / 2;
+
+  // Create the d3 graph and allow it to scale with window
+  var svg = d3.select("#olympics-viz").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" +
+              (margin.left + width  / 2) + "," +
+              (margin.top  + height / 2) + ")");
+
+
+  // var x = d3.scaleLinear().range([0,2 * Math.PI]);  --V4 TODO
+  // var y = d3.scaleSqrt().range([10, radius]);  --V4 TODO
+  var x = d3.scale.linear()
+      .range([0, 2 * Math.PI]);
+  var y = d3.scale.sqrt()
+      .range([9, radius]);
+
+  // Use d3.nest property to create hierarchical tree
+  // of the JSON dataset.
+
+  // var partition = d3.partition() --V4 TODO
+  var partition = d3.layout.partition()
+      // .sort(function(a, b) { return (a.Country > b.Country); })
+      .sort(function(a, b) { return (a.Year > b.Year); })
+      // .sort(function(a, b) { return (a.Gender > b.Gender); })
+      // .sort(function(a, b) { return (a.Sport > b.Sport); })
+      .children(function(d) {
+          //console.log(d.values)
+          return Array.isArray(d.values) ? d.values : null;
+      })
+      .value(function(d) {
+          return d.values;
+      });
+
+
+  // This creates the concentric rings based
+  //  on individual arcs. Arc length is proportional to 
+  //  percentage of medals for that category. 
   var inter_ring_spacing = 4.0
   var arc = d3.svg.arc()
       .startAngle(function(d) {
@@ -200,87 +198,20 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .on("mouseout", mouseout);
 
   // Add a container for the tooltip.
-  var tooltip = svg.append("text")
+  var medalsWon = svg.append("text")
       .attr("font-size", 16)
       .attr("font-weight", "bolder")
-      // .attr("background-color", "white")
-      .attr("fill", "#000")
       .attr("fill-opacity", 0)
       .attr("text-anchor", "middle")
       .style("pointer-events", "none");
 
-   // var imgtip = svg.append("svg:image")
-   //    .attr('xlink:href','img/'+ toString(d.key)+'.png')
-   //    .attr("width", 64)
-   //    .attr("height", 64);
-
-  // Add the title.
-  svg.append("text")
+  // Add the title to the viz.
+  var viz_title = svg.append("text")
       .attr("font-size", 18)
       .attr("fill", "#000")
       .attr("text-anchor", "middle")
-      .attr("transform", "translate(" + 0 + "," + (-10 -height/2)  +")")
+      .attr("transform", "translate(" + 0 + "," + (-height/2 - 8)  +")")
       .text("Total Olympic Medal Counts");
 
-  // Handle clicks on data points. All
-  // we need to do is start the transition
-  // that updates the paths of the arcs.
-  function click(d) {
-      path.transition()
-          .duration(750)
-          .attrTween("d", arcTween(d));
-      // Hide the tooltip since the
-      // path "underneath" the cursor
-      // will likely have changed.
-      mouseout();
-  };
 
-  var formatComma = d3.format(",")  // Add comma into numbers for thousands place
-
-
-  // Handle mouse moving over a data point
-  // by enabling the tooltip.
-  function mouseover(d) {
-      tooltip.text(d.key + ": " +
-          formatComma(d.value) + " medal" +
-          (d.value > 1 ? "s" : ""))
-          .transition()
-          .attr("fill-opacity", 1);
-       // imgtip.image(d)
-       //    .attr("fill-opacity", 1);
-  };
-
-
-  // Handle mouse leaving a data point
-  // by disabling the tooltip.
-  function mouseout() {
-      tooltip.transition()
-          .attr("fill-opacity", 0);
-      // imgtip.transition()
-      //     .attr("fill-opacity", 0);
-
-  };
-
-  // Function to interpolate values for
-  // the visualization elements during
-  // a transition.
-  function arcTween(d) {
-      var xd = d3.interpolate(x.domain(),
-                  [d.x, d.x + d.dx]),
-          yd = d3.interpolate(y.domain(),
-                  [d.y, 1]),
-          yr = d3.interpolate(y.range(),
-                  [d.y ? 20 : 0, radius]);
-      return function(d, i) {
-          return i ?
-              function(t) {
-                  return arc(d);
-              } :
-              function(t) {
-                  x.domain(xd(t));
-                  y.domain(yd(t)).range(yr(t));
-                  return arc(d);
-              };
-      };
-  }
 });
