@@ -1,6 +1,11 @@
+// parts of this code have been adapted from the D3 example library,
+// specifically the sunburst plot examples.
+
+// Additionally, we like to thank and give recognition to the creators and research
+// conducted to design the sunburst map: https://www.cc.gatech.edu/gvu/ii/sunburst/
+
 
 d3.json("data/exercise2-olympics.json", function(dataset) {
-
 
   // Animation for changing the concentric rings when
   // one of them is clicked.
@@ -61,7 +66,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
           // Create a categorical color scale
           // so that every country has its own color
 
-          // colors = d3.schemeCategory10() --V4 TODO
           colors = d3.scale.category10().domain(d3.range(0,10));
 
           // White for the center circle
@@ -76,9 +80,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
           // Create the color scale
 
-          // colors = d3.scaleLinear() --V4 TODO
           colors = d3.scale.linear()
-                  // .interpolate(d3.interpolateHclLong) --V4 TODO
                   .interpolate(d3.interpolateHcl)
                   .range([
                       startColor.toString(),
@@ -121,8 +123,7 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
               (margin.top  + height / 2) + ")");
 
 
-  // var x = d3.scaleLinear().range([0,2 * Math.PI]);  --V4 TODO
-  // var y = d3.scaleSqrt().range([10, radius]);  --V4 TODO
+
   var x = d3.scale.linear()
       .range([0, 2 * Math.PI]);
   var y = d3.scale.sqrt()
@@ -131,7 +132,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
   // Use d3.nest property to create hierarchical tree
   // of the JSON dataset.
 
-  // var partition = d3.partition() --V4 TODO
   var partition = d3.layout.partition()
       // .sort(function(a, b) { return (a.Country > b.Country); })
       .sort(function(a, b) { return (a.Year > b.Year); })
@@ -147,8 +147,8 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
 
   // This creates the concentric rings based
-  //  on individual arcs. Arc length is proportional to 
-  //  percentage of medals for that category. 
+  //  on individual arcs. Arc length is proportional to
+  //  percentage of medals for that category.
   var inter_ring_spacing = 4.0
   var arc = d3.svg.arc()
       .startAngle(function(d) {
