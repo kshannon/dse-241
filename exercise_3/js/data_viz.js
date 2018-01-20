@@ -69,16 +69,16 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
           //pass our own colors!! for the child elements
           var colors = d3.scale.category20b();
-          var range = ["#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7",
-                        "#5F22B7"];
+          var range = ["#FEE5D9",
+                        "#FB6A4A",
+                        "#A50F15",
+                        "#BDD7E7",
+                        "#3182BD",
+                        "#7828A0",
+                        "#967314",
+                        "#C7C7C7",
+                        "#D782A0",
+                        "#252525"];
           colors.range(range);
 
           // White for the center circle
