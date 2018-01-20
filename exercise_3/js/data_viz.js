@@ -58,15 +58,28 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
 
   // Function to define the color for the data d
   var color = function(d) {
-
       var colors;
-
       if (!d.parent) {
-
           // Create a categorical color scale
           // so that every country has its own color
+          // colors = d3.scale.category10().domain(d3.range(0,10));
+          //   .domain(d3.range(0,10))
+          //   .range(colorbrewer.RdBu[9]);
+          // console.log(colors);
 
-          colors = d3.scale.category10().domain(d3.range(0,10));
+          //pass our own colors!! for the child elements
+          var colors = d3.scale.category20b();
+          var range = ["#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7",
+                        "#5F22B7"];
+          colors.range(range);
 
           // White for the center circle
           d.color = "#fff";
@@ -208,6 +221,6 @@ d3.json("data/exercise2-olympics.json", function(dataset) {
       .attr("fill", "#000")
       .attr("text-anchor", "middle")
       .attr("transform", "translate(" + 0 + "," + (-height/2 - 8)  +")")
-      .text("Total Olympic Medal Counts");
+      //.text("Total Olympic Medal Counts");
 
 });
