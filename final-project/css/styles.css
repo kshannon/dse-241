@@ -1,0 +1,17 @@
+body {
+	background: #E9EBEE;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.container-border {
+	background-color: white;
+	border: 7px solid #E9EBEE;
+}
