@@ -2,7 +2,6 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 var color = d3.scaleQuantize()
     .domain([1,9])
@@ -13,16 +12,31 @@ var simulation = d3.forceSimulation()
 	.force("link", d3.forceLink().distance(function(d) {return d.weight;}))
     .force("charge", d3.forceManyBody().strength(-1.7*height))
     .force("center", d3.forceCenter(width / 2, height / 2));
-
+		
+					
 d3.json("graph.json", function(error, graph) {
-  if (error) throw error;
-
+  if (error) throw error;	
+  
+  svg.append("svg:defs").selectAll("marker")
+    .data(["end"])      
+    .enter().append("svg:marker")   
+    .attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 3.5)
+    .attr("markerHeight", 3.5)
+    .attr("orient", "auto")
+    .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5");
+	
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return d.weight; });
+      .attr("stroke-width", function(d) { return d.weight; })
+	  .attr("marker-end", "url(#end)");
 
 	link.append("title")
       .text(function(d) { return "Weight = " +  (d.weight); });
@@ -61,6 +75,7 @@ d3.json("graph.json", function(error, graph) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
+  
 });
 
 function dragstarted(d) {
