@@ -2,11 +2,15 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+
 var color = d3.scaleOrdinal(d3.schemeCategory20);
+var color = d3.scaleQuantize()
+    .domain([1,9])
+    .range(["#fc8d59", "#ffffbf", "#91bfdb" ]);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-	.force("link", d3.forceLink().distance(function(d) {return d.weight;}).strength(0.1))
+	.force("link", d3.forceLink().distance(function(d) {return d.weight;}))
     .force("charge", d3.forceManyBody().strength(-1.7*height))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
@@ -18,22 +22,26 @@ d3.json("graph.json", function(error, graph) {
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.weight); });
+      .attr("stroke-width", function(d) { return d.weight; });
 
+	link.append("title")
+      .text(function(d) { return "Weight = " +  (d.weight); });
+	  
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
-      .attr("r", function(d) { return 3.0*d.age; })
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("r", function(d) { return 4.0*d.age; })
+      .attr("fill", function(d) { return color(d.age); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-
+		  
+  
   node.append("title")
-      .text(function(d) { return "Sheep ID = " +  (d.id + 1); });
+      .text(function(d) { return "Sheep ID = " +  (d.id + 1) + "\nAge = " + (d.age); });
 
   simulation
       .nodes(graph.nodes)
