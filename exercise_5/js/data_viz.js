@@ -17,46 +17,39 @@ var simulation = d3.forceSimulation()
 d3.json("graph.json", function(error, graph) {
   if (error) throw error;	
   
-  svg.append("svg:defs").selectAll("marker")
-    .data(["end"])      
-    .enter().append("svg:marker")   
-    .attr("id", String)
-    .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 15)
-    .attr("refY", -1.5)
-    .attr("markerWidth", 3.5)
-    .attr("markerHeight", 3.5)
-    .attr("orient", "auto")
-    .append("svg:path")
-    .attr("d", "M0,-5L10,0L0,5");
-	
-  var link = svg.append("g")
+  
+ var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return d.weight; })
-	  .attr("marker-end", "url(#end)");
+	  .attr("marker-end", "url(#end)")
+	   .attr("fill-opacity", 0.8);
 
 	link.append("title")
       .text(function(d) { return "Weight = " +  (d.weight); });
-	  
-  var node = svg.append("g")
+	 
+ var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", function(d) { return 4.0*d.age; })
       .attr("fill", function(d) { return color(d.age); })
+	  .attr("fill-opacity", 0.8)
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-		  
-  
+		
+	d3.select("#arrows").on("change",updateArrows);
+			updateArrows();
+
   node.append("title")
       .text(function(d) { return "Sheep ID = " +  (d.id + 1) + "\nAge = " + (d.age); });
 
+	
   simulation
       .nodes(graph.nodes)
       .on("tick", ticked);
@@ -64,6 +57,30 @@ d3.json("graph.json", function(error, graph) {
   simulation.force("link")
       .links(graph.links);
 
+  function updateArrows() {
+	  
+	if(d3.select("#arrows").property("checked")){
+ svg.append("svg:defs").selectAll("marker")
+    .data(["end"])      
+    .enter().append("svg:marker")   
+    .attr("id", String)
+    .attr("viewBox", "0 0 12 12")
+    .attr("refX", 6)
+    .attr("refY", 6)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+	.attr("xoverflow","visible")
+    .append("svg:path")
+    .attr("d", "M2,2 L10,6 L2,10 L6,6 L2,2");
+}  else {
+	d3.selectAll("marker").remove()
+	
+}
+	  
+	  
+  }
+  
   function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
