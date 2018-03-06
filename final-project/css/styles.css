@@ -15,3 +15,66 @@ h5 {
 	background-color: white;
 	border: 7px solid #E9EBEE;
 }
+
+#mapid {
+	height: 180px;
+}
+
+
+
+
+
+
+.tkt-page-header {
+	padding: 10px 0;
+}
+
+
+
+.btn-toolbar {
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.btn-toolbar .btn {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.btn-toolbar .dropdown-toggle {
+  color: #000000;
+  background-color: #E4E5E7;
+}
+
+.badge-pale-ale {
+	margin-right: 7px;
+	margin-bottom: 7px;
+	color: #5D5D5D;
+  	background-color: #FFF8C4;
+}
+
+.remove-filter {
+	padding-left: 3px;
+	padding-right: 3px;
+	color: #939393;
+}
+
+.remove-filter:hover {
+	color: #003434;
+}
+
+.filter input{
+	/*All of this goes away with .dropdown-item class!*/
+/*  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 6px;
+  margin-top: 8px;
+  margin-left: 20px;*/
+  margin-right: 10px;
+}
+
+/*
+input[type=checkbox].big-checkbox {
+  transform: scale(1.5);
+  margin-right: 10px;
+}*/
