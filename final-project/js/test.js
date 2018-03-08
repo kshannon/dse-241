@@ -13,7 +13,7 @@ var map_tile = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 //var svg = d3.select("#map").select("svg"); //does not work... no overay-pane
 var svg = d3.select(map.getPanes().overlayPane).append("svg"); //passing svg to leaflet overlayPane
-g = svg.append("g").attr("class", "leaflet-zoom-hide"); //hide svg element on zooming
+svgCircles = svg.append("g").attr("class", "leaflet-zoom-hide"); //hide svg element on zooming
 // heatmap = svg.append("heatmap")
 // hexBin = svg.append("hexbin")
 // choropleth = svg.append("choropleth")
@@ -26,46 +26,77 @@ d3.json("../data/circles.json", function(error, collection) {
         alert(error);
     }
     else {
+        var transform = d3.geoTransform({
+            point: projectPoint
+            }),
+            path = d3.geoPath().projection(transform);
+            console.log(transform)
+
+
+        var bounds = path.bounds(collection.objects),
+            topLeft = bounds[0],
+            bottomRight = bounds[1];
+            console.log(bounds[0]) //this prints out infintiey... hmmmmmmmmm
+//https://stackoverflow.com/questions/40047326/overlaying-circles-on-leaflet-with-d3-results-in-not-positioned-properly
+
         collection.objects.forEach(function(d) {
             d.LatLng = new L.LatLng(d.circle.coordinates[0],
                                     d.circle.coordinates[1]);
-            console.log(d)
+            // console.log(d)
+        });
 
 
-        // var circles = g.selectAll("circle")
-        //     .data(collection.objects)
-        //     .enter().append("circle")
-        //     .style("opacity", 0.7)
-        //     .style("fill", 'red')
-        //     .attr('stroke', 'white')
-        //     .attr("r", 50)
-
-        function projectPoint(x, y) {
-              var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-              this.stream.point(point.x, point.y);
-              }
-        var transform = d3.geoTransform({point: projectPoint}),
-            path = d3.geoPath().projection(transform);
-        // var feature = g.selectAll("path")
-        //     .data(collection.features)
-        //     .enter().append("path");
-        var feature = g.selectAll("circle")
+        var circles = svgCircles.selectAll("circle")
             .data(collection.objects)
-            .enter().append("circle")
+            .enter()
+            .append("circle")
             .style("opacity", 0.7)
             .style("fill", 'red')
             .attr('stroke', 'white')
             .attr("r", 50)
-        feature.attr("d", path);
-        var bounds = path.bounds(collection),
-            topLeft = bounds[0],
-            bottomRight = bounds[1];
-        svg .attr("width", bottomRight[0] - topLeft[0])
-            .attr("height", bottomRight[1] - topLeft[1])
-            .style("left", topLeft[0] + "px")
-            .style("top", topLeft[1] + "px");
 
-        g   .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+        function projectPoint(x, y) {
+            var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+            this.stream.point(point.x, point.y);
+            console.log(point)
+        }
+
+        function update() {
+            circles.attr("cx", function(d) {
+                return map.latLngToLayerPoint(d.LatLng).x;
+            });
+            circles.attr("cy", function(d) {
+                return map.latLngToLayerPoint(d.LatLng).y;
+            });
+            svg.attr("width", bottomRight[0] - topLeft[0])
+                .attr("height", bottomRight[1] - topLeft[1])
+                .style("left", topLeft[0] + "px")
+                .style("top", topLeft[1] + "px");
+
+            svgCircles.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
+        }
+
+      map.on("viewreset", update);
+      update();
+
+  }
+});
+
+        // var transform = d3.geoTransform({point: projectPoint}),
+        //     path = d3.geoPath().projection(transform);
+        // // var feature = g.selectAll("path")
+        // //     .data(collection.features)
+        // //     .enter().append("path");
+        // feature.attr("d", path);
+        // var bounds = path.bounds(collection),
+        //     topLeft = bounds[0],
+        //     bottomRight = bounds[1];
+        // svg .attr("width", bottomRight[0] - topLeft[0])
+        //     .attr("height", bottomRight[1] - topLeft[1])
+        //     .style("left", topLeft[0] + "px")
+        //     .style("top", topLeft[1] + "px");
+        //
+        // g.attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
 
         // map.on("viewreset", update);
 		// update();
@@ -81,7 +112,7 @@ d3.json("../data/circles.json", function(error, collection) {
         // 			)
         // 		}
 
-        });
+        // });
         // var bounds = path.bounds(collection),
         //     topLeft = bounds[0],
         //     bottomRight = bounds[1];
@@ -92,8 +123,8 @@ d3.json("../data/circles.json", function(error, collection) {
         //     .style("top", topLeft[1] + "px");
         //
         // g   .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
-    };
-});
+//     };
+// });
 
 //
 // /* Initialize SVG layer */
