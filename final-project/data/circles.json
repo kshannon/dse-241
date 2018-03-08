@@ -1,0 +1,23 @@
+{
+	"objects": [{
+			"circle": {
+				"coordinates": [42.4653, -79.42]
+			}
+		},
+		{
+			"circle": {
+				"coordinates": [42.342, -79.345]
+			}
+		},
+		{
+			"circle": {
+				"coordinates": [250,250]
+			}
+		},
+		{
+			"circle": {
+				"coordinates": [300,300]
+			}
+		}
+	]
+}

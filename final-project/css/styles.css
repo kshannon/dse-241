@@ -17,7 +17,13 @@ h5 {
 }
 
 #mapid {
-	height: 380px;
+  width: 960px;
+  height: 500px;
+}
+
+
+.leaflet-pane {
+    z-index: 98;
 }
 
 
