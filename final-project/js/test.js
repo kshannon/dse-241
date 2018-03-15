@@ -27,7 +27,7 @@ d3.json("../data/test-circles.json", function(error, collection) {
     }
     else {
         var transform = d3.geoTransform({point: projectPoint});
-        var path = d3.geoPath().projection(transform);
+        var path = d3.geoPath(transform)//.projection(transform);
             // console.log(typeof path); //path is a function
 
         collection.objects.forEach(function(d) {
